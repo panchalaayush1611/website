@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    /* color: black; */
+    
+}
+
+:root {
+    --background-light: rgb(243, 243, 243);
+    --background-light-hover: black;
+    --partition-color: rgba(128, 128, 128, 0.219);
+    --color-light: grey;
+    --color-light-hover: white;
+    --footer-background: black;
+}
+
+.dark-mode {
+    --background-light-hover: rgb(243, 243, 243);
+    --background-light: black;
+    --partition-color: rgba(128, 128, 128, 0.219);
+    --color-light-hover: grey;
+    --color-light: white;
+    --footer-background: white;
+ 
+}
+footer {
+    color: var(--background-light-hover);
+}
+
+.main_content {
+    /* background: orange; */
+    background: var(--background-light);
+    place-content: center;
+    padding-top: 100px;
+
+    .back_button {
+        svg {
+            height: 25px;
+            margin: 20px;
+            width: max-content;
+            position: absolute;
+            top: 90px;
+            cursor: pointer;
+        }
+    }
+}
+
+.product_info {
+    /* margin-top: 80px; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+    /* background: red; */
+    font-weight: 200;
+    font-family: sans-serif;
+
+    .left_container {
+        /* background: orange; */
+        display: flex;
+        flex-direction: column;
+
+        img {
+            height: 300px;
+            margin: 50px;
+            transition: ease-in-out 0.5s;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        input {
+            padding: 12px;
+            width: max-content;
+            align-self: center;
+            background: var(--color-light-hover);
+            border: 2px solid black;
+            cursor: pointer;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: ease-in-out 0.5s;
+
+            &:hover {
+                background: var(--background-light-hover);
+                color: var(--color-light-hover);
+            }
+        }
+    }
+
+    .right_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 30px;
+
+        /* background: red; */
+        h1 {
+            font-size: 35px;
+            margin: 12px;
+            color: var(--background-light-hover);
+        }
+
+        p {
+            margin: 12px;
+            color: var(--background-light-hover);
+        }
+
+        .grid {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            margin: 0;
+            margin-left: -150px;
+            margin-top: 45px;
+
+            .item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    height: 150px;
+                    width: auto;
+                    border-radius: 6px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1520px) {
+    footer {
+        width: 105vw;
+    }
+
+    .product_info {
+        height: 110vh;
+    }
+}
+
+@media screen and (max-width: 1108px) {
+    .product_info {
+        display: flex;
+        flex-direction: column;
+        height: 150vh;
+
+        .left_container {
+            img {
+                width: 300px;
+            }
+        }
+
+        .right_container {
+            .grid {
+                margin: 0;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 881px) {
+    .product_info {
+        display: flex;
+        flex-direction: column;
+
+        .right_container {
+            padding: 0;
+            /* background: red; */
+            width: 130vw;
+
+            h1 {
+                margin: 20px;
+            }
+
+            p {
+                margin: 20px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                margin: 0;
+                width: 130vw;
+            }
+        }
+    }
+
+    footer {
+        width: 150vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .product_info {
+        width: 200vw;
+        height: 200vh;
+
+        .right_container {
+
+            h1,
+            p {
+                width: 190vw;
+            }
+        }
+    }
+
+    footer {
+        width: 200vw;
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    footer {
+        width: 105vw;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    footer {
+        width: 150vw;
+    }
+}

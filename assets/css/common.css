@@ -1,0 +1,366 @@
+
+/* HEADER */
+
+.logo {
+    width: 164px;
+    height: 9vh;
+    background: var(--logo-img);
+    /* background: url('../images/logo_white.png'); */
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Segoe UI";
+    /* background-color: rgb(243, 243, 243); */
+    background: var(--background-light);
+    color: var(--background-light-hover);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.Theme {
+    padding: 10px;
+    background: transparent;
+    border: 1px solid var(--background-light-hover);
+    border-radius: 12px;
+    transition: ease-in-out 0.5s;
+    position: absolute;
+    color : var(--background-light-hover);
+    bottom: 22px;
+
+    &:hover {
+        background: var(--background-light-hover);
+        color: var(--color-light-hover);
+        cursor: pointer;
+    }
+}
+
+#icon1{
+    cursor: pointer;
+}
+
+.Login {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid var(--background-light-hover);
+    color : var(--background-light-hover);
+    border-radius: 12px;
+    /* color: grey; */
+    transition: ease-in-out 0.5s;
+}
+
+.Login:hover {
+    cursor: pointer;
+    background: var(--background-light-hover);
+    color: var(--color-light-hover);
+}
+
+.registration {
+    display: flex;
+}
+
+.right {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60vw;
+    
+    li {
+        list-style: none;
+    }
+}
+
+.right ul {
+    display: flex;
+    gap: 34px;
+}
+
+.right ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    a{
+        color : var(--background-light-hover);
+    }
+}
+
+.right ul li span {
+    padding: 0 5px;
+}
+
+
+
+/* FOOTER */
+
+
+
+footer {
+    font-family: sans-serif;
+    background-color: var(--background-light);
+    color: var(--background-light-hover);
+    border-top: 0.5px solid var(--background-light-hover);
+
+    .one {
+        width: 333px;
+        margin: 60px;
+        background: var(--logo-img);
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.design {
+    margin: 30px;
+}
+
+.main_footer {
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        font-weight: 200;
+        cursor: pointer;
+        width: max-content;
+        margin-bottom: 10px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.main_footer_1 {
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        font-size: 20px;
+        font-family: sans-serif;
+        margin: 12px;
+        font-weight: 100;
+    }
+}
+
+.five svg {
+    height: 50px;
+    margin: 15px;
+    cursor: pointer
+}
+
+.five svg:hover {
+    transform: scale(1.25);
+    transition: 0.5s;
+    color: white;
+    filter: drop-shadow(2px 2px 2px  var(--background-light-hover));
+}
+
+.partition {
+    width: 100;
+    border: 1px solid grey;
+}
+
+/* SEARCH BAR */
+.third {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
+    #search_bar_01 {
+        border: 1px solid black;
+        margin: 40px;
+    }
+}
+.search_bar {
+    background: white;
+    width: max-content;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    height: 5vh;
+    margin: 5px;
+    border-radius: 20px;
+
+    img {
+        height: 25px;
+    }
+
+    #search {
+        background: transparent;
+        width: 25vw;
+        border: none;
+        outline: none;
+        text-align: left;
+        font-size: 1.25rem;
+        margin-left: 10px;
+        color: black;
+
+        &::placeholder {
+            color: rgba(128, 128, 128, 0.589);
+        }
+    }
+
+    #search_btn {
+        cursor: pointer;
+        color: black;
+        height: 5vh;
+        background: transparent;
+        font-size: 1.25rem;
+        padding: 8px;
+        padding-right: 12px;
+        padding-left: 12px;
+        border: none;
+        transition: ease-in-out 0.3s;
+    }
+}
+
+
+
+
+/* MEDIA QUERY */
+
+
+
+@media screen and (max-width: 1499px) {
+    .design {
+        margin: 15px;
+    }
+
+    .five svg {
+        height: 40px;
+        margin: 5px;
+    }
+}
+
+
+@media screen and (max-width: 1223px) {
+    .design h1 {
+        font-size: 28px;
+    }
+
+    footer {
+        width: 100vw;
+
+        img {
+            width: 164px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 920px) {
+    .right {
+        ul {
+            display: none;
+
+            li {
+                font-size: 25px;
+                padding: 12px;
+            }
+        }
+    }
+
+    .Login {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        /* background: red;
+        padding: 20px; */
+        cursor: pointer;
+        margin-left: 500px;
+
+        svg {
+            height: 50px;
+            width: auto;
+            fill: var(--background-light-hover);
+        }
+    }
+
+    footer {
+        width: 150vw;
+    }
+}
+
+
+@media screen and (max-width:850px) {
+    .burger {
+        margin-left: 380px;
+    }
+
+    nav {
+        width: 150vw;
+    }
+
+    footer {
+        width: 150vw;
+    }
+
+}
+
+
+@media screen and (max-width:650px) {
+
+    .burger {
+        margin-left: 300px;
+    }
+
+}
+
+
+@media screen and (max-width:590px) {
+
+    .burger {
+        margin-left: 250px;
+    }
+
+    nav {
+        width: 200vw;
+    }
+
+    footer {
+        width: 200vw;
+        font-size: 0.75rem;
+    }
+}
+@media  screen and (max-width:1350px) {
+    footer {
+        .one {
+            width: 300px;
+            height: 150px;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}
+@media  screen and (max-width:1100px) {
+    footer {
+        .one {
+            width: 250px;
+            height: 100px;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}
+
+@media  screen and (max-width:445px) {
+    footer {
+        .one {
+            display: none;
+        }
+    }
+}
+
